@@ -10,7 +10,7 @@
       .alert.error= flash[:alert]
     .main
       .container
-        .row-fluid
+        .row-fluid.header
           .span12
             .jumbotron
               %h1 Vacunitas
@@ -18,4 +18,5 @@
                 El calendario de vacunación personalizado de tu bebé para que lo agregues a
                 %br
                 Google Calendar, Apple iCal, Yahoo Calendar, Windows Calendar &hellip;
+        
         = yield

@@ -2,46 +2,69 @@
 @import "bootstrap-responsive";
 @import "compass";
 @import url(http://fonts.googleapis.com/css?family=Alegreya+SC);
-@import url(http://fonts.googleapis.com/css?family=Alegreya);
 
+html, body, .main, .container{
+  min-height: 100%;
+}
 body{
-  background: #eee;
+  background: #3C494F;
 }
 
-.jumbotron {
-  margin: 60px 0 40px;
-  text-align: center;
-  h1{
-    font-family: 'Alegreya SC';
-    font-size: 100px;
-    line-height: 1;
-    @include text-shadow(0px 2px 1px white);
+.header{
+  background: #C77454;
+  color: #F8E5AD;
+  border-bottom: 10px solid #E4C068;
+  .span12{
+    padding: 0 10px;
   }
-  .lead{
-    font-size: 24px;
-    line-height: 1.25;
+  .jumbotron {
+    margin: 50px 0;
+    text-align: center;
+    h1{
+      font-family: 'Alegreya SC';
+      font-size: 100px;
+      line-height: 1;
+      @include text-shadow(0px 2px 1px white);
+    }
+    .lead{
+      font-size: 24px;
+      line-height: 1.25;
+    }
   }
 }
+
+.container{
+  background: #F8E5AD;
+  color: #3C494F;
+  .content{
+    padding: 20px 0px;
+    .span8{
+      padding: 20px;
+    }
+  }
+}
+
 
 .form-container{
   text-align: center;
+  padding: 0 10px;
   p{
     font-size: 40px;
     line-height: 40px;
-    font-family: 'Alegreya';
+    margin-bottom: 15px;
+    font-weight: 200;
   }
   input[type=text]{
-    font-family: 'Alegreya';
     height: auto;
     font-size: 40px;
     line-height: 40px;
     text-align: center;
     padding: 0;
+    margin-bottom: 30px;
   }
-  #day, #month, #year{
+  select{
     font-size: 30px;
     height: auto;
-    font-family: 'Alegreya';
   }
   #day{
     width: 110px;
@@ -56,20 +79,56 @@ body{
     font-size: 30px;
     height: auto;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 }
 .download{
   text-align: center;
+  background: #E4C068;
   a{
     font-size: 30px;
     height: auto;
     padding: 20px;
-    margin-top: 20px;
+  }
+  .span8{
+    padding: 20px 10px 30px;
   }
 }
 .vaccines{
   li, h1, h4, small {
     font-weight: 200;
+  }
+}
+
+@media (max-width: 767px){
+  body{
+    padding: 0;
+  }
+  .header{
+    .jumbotron {
+      h1{
+        font-size: 60px;
+      }
+      .lead{
+        font-size: 17px;
+      }
+    }
+  }
+  .form-container{
+    text-align: center;
+    padding: 0 10px;
+    p{
+      font-size: 25px;
+    }
+    select{
+      width: 100% !important;
+    }
+  }
+  .download{
+    a{
+      font-size: 20px;
+      line-height: 30px;
+      padding: 5px;
+    }
   }
 }

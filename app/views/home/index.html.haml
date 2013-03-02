@@ -1,0 +1,12 @@
+.row-fluid
+  .span12.form-container
+    %form(method="get" action=show_path)
+      %p Tu bebé se llama
+      %input.span8.offset2(type="text" name="name" required="true")
+      %p y nació el
+      = select_tag(:day, options_for_select(1..31), prompt: 'Día', required: true)
+      - months = %w(Enero Febrero Marzo Abril Mayo Junio Julio Agosto Septiembre Octubre Noviembre Diciembre).to_enum(:each_with_index).map{|name, index| [name, index+1]}
+      = select_tag(:month, options_for_select(months), prompt: 'Mes')
+      = select_tag(:year, options_for_select(2000..Date.today.year), prompt: 'Año')
+      %br
+      %button.btn.btn-primary(type="submit") Ver Calendario

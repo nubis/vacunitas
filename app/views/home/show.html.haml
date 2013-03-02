@@ -1,0 +1,15 @@
+.container
+  .row-fluid.download
+    .span8.offset2
+      = link_to "Descargá el calendario de #{params[:name]}", ical_path(params), class: 'btn btn-download btn-success'
+  .row-fluid
+    .span8.offset2.vaccines
+      %hr
+      %h1 Vacunas para #{params[:name]}
+      - @schedule.each do |date, vaccines, colloquial|
+        %h4
+          = l(date.to_date, format: :long)
+          %small= colloquial
+        %ul
+          - vaccines.each do |vaccine|
+            %li= vaccine

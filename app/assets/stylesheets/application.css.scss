@@ -3,30 +3,25 @@
 @import "compass";
 @import url(http://fonts.googleapis.com/css?family=Alegreya+SC);
 
-html, body, .main, .container{
-  min-height: 100%;
-}
 body{
   background: #3C494F;
 }
 
-.header{
+.header .span12{
   background: #C77454;
   color: #F8E5AD;
-  border-bottom: 10px solid #E4C068;
-  .span12{
-    padding: 0 10px;
-  }
+  border-bottom: 1em solid #E4C068;
   .jumbotron {
-    margin: 50px 0;
+    padding: 3em 1em;
     text-align: center;
     h1{
       font-family: 'Alegreya SC';
-      font-size: 100px;
+      font-size: 10em;
       line-height: 1;
       @include text-shadow(0px 2px 1px white);
     }
     .lead{
+      padding: 0 1em;
       font-size: 24px;
       line-height: 1.25;
     }
@@ -102,15 +97,18 @@ body{
 
 @media (max-width: 767px){
   body{
+    background: red;
     padding: 0;
   }
-  .header{
+  .header .span12{
     .jumbotron {
+      padding: 1em;
       h1{
-        font-size: 60px;
+        font-size: 4em;
+        @include text-shadow(0px 1px 1px white);
       }
       .lead{
-        font-size: 17px;
+        font-size: 1em;
       }
     }
   }
@@ -126,9 +124,9 @@ body{
   }
   .download{
     a{
-      font-size: 20px;
-      line-height: 30px;
-      padding: 5px;
+      font-size: 16px;
+      line-height: 1em;
+      padding: 0.5em;
     }
   }
 }

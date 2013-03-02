@@ -1,5 +1,8 @@
 .row-fluid.download
   .span8.offset2
+    = link_to "Subscribite al calendario de #{params[:name]}", ical_url(params.merge(protocol: 'webcal')), class: 'btn btn-inverse'
+    %br
+    %br
     = link_to "Descargá el calendario de #{params[:name]}", ical_path(params), class: 'btn btn-inverse'
 .row-fluid.content
   .span8.offset2.vaccines

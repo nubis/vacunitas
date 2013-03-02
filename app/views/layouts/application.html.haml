@@ -2,21 +2,21 @@
 %html
   %head
     %title Vacunitas
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
     - if flash[:alert]
       .alert.error= flash[:alert]
-    .main
-      .container
-        .row-fluid.header
-          .span12
-            .jumbotron
-              %h1 Vacunitas
-              %p.lead
-                El calendario de vacunación personalizado de tu bebé para que lo agregues a
-                %br
-                Google Calendar, Apple iCal, Yahoo Calendar, Windows Calendar &hellip;
+    .container
+      .row.header
+        .span12
+          .jumbotron
+            %h1 Vacunitas
+            %p.lead
+              El calendario de vacunación personalizado de tu bebé para que lo agregues a
+              %br
+              Google Calendar, Apple iCal, Yahoo Calendar, Windows Calendar &hellip;
         
-        = yield
+      = yield
